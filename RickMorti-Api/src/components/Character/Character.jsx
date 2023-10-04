@@ -1,21 +1,27 @@
 import { useEffect } from "react";
-import "./character";
+import "./character.css";
 import { useCharacter } from "../../hooks/useCharacter";
 
 export function Character() {
-  const { getAllCharacter, allCharacter } = useCharacter();
+  const { getAllCharacters, allCharacters } = useCharacter();
 
   useEffect(() => {
-    getAllCharacter();
+    getAllCharacters();
   }, []);
 
   return (
-    <ul>
-      {allCharacter.map((item, index) => (
+    <ul className="contenedor">
+      {allCharacters.map((item, index) => (
         <li key={index}>
-          <h3>{item.name}</h3>
-          <p>{item.status}</p>
-          <img src={item.image} alt="" />
+          <div className="encapsulador">
+            <img src={item.image} alt="" />
+            <div>
+              <h3>{item.name}</h3>
+              <p>{item.status}</p>
+              <p>{item.origin.name}</p>
+              <p>{item.species}</p>
+            </div>
+          </div>
         </li>
       ))}
     </ul>
