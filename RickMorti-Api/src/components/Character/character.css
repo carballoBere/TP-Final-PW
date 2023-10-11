@@ -1,19 +1,29 @@
 .contenedor {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   list-style: none;
+  gap: 20px;
 }
 .encapsulador {
   display: flex;
-  margin-bottom: 40px;
   border-radius: 5px;
+  background-color: gray;
+  margin-top: 40px;
 }
 
 .texto {
   margin-left: 10px;
 }
 img {
-  width: 50%;
-  height: 50%;
+  width: 20em;
+  height: 15em;
+}
+.fondo {
+  background-color: black;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
 }

@@ -17,23 +17,27 @@ export function Character() {
         <button>Suport Us</button>
       </div>
       <div>
-        <h1>The Ricky And Morty API</h1>
+        <div className=" titulo">
+          <h1>The Ricky And Morty API</h1>
+        </div>
       </div>
-      <ul className="contenedor">
-        {allCharacters.map((item, index) => (
-          <li key={index}>
-            <div className="encapsulador">
-              <img src={item.image} alt="" />
-              <div className="texto">
-                <h3>{item.name}</h3>
-                <p>{item.status}</p>
-                <p>{item.origin.name}</p>
-                <p>{item.species}</p>
+      <div className="fondo ">
+        <ul className="contenedor">
+          {allCharacters.map((item, index) => (
+            <li key={index}>
+              <div className="encapsulador">
+                <img src={item.image} alt="" />
+                <div className="texto">
+                  <h3>{item.name}</h3>
+                  <p>{item.status}</p>
+                  <p>{item.origin.name}</p>
+                  <p>{item.species}</p>
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
