@@ -4,6 +4,9 @@
   grid-auto-rows: auto;
   list-style: none;
   gap: 20px;
+  padding-inline-start: 0;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .encapsulador {
   display: flex;
@@ -16,7 +19,7 @@
   margin-left: 10px;
 }
 img {
-  width: 20em;
+  width: 15em;
   height: 15em;
 }
 .fondo {
@@ -26,4 +29,17 @@ img {
 .titulo {
   display: flex;
   justify-content: center;
+  font-size: 40px;
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-end;
+}
+body {
+  margin: 0;
+}
+
+ul {
+  margin-block-start: 0;
 }
